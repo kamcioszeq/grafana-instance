@@ -1,5 +1,5 @@
 variable "aws_region" {
-	default = "eu-north-1"
+	default = "eu-central-1"
 }
 
 variable "instance_type" {
@@ -23,12 +23,12 @@ variable "security_group_instance_name" {
 }
 
 variable "ebs_volume_system_size" {
-	default = 10
+	default = 5
 	description = "Size of system partition"
 }
 
 variable "ebs_volume_data_size" {
-	default = 12
+	default = 1
 	description = "size of data parti"
 }
 
