@@ -23,7 +23,7 @@ variable "security_group_instance_name" {
 }
 
 variable "ebs_volume_system_size" {
-	default = 9
+	default = 11
 	description = "Size of system partition"
 }
 
