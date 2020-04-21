@@ -9,6 +9,10 @@ resource "aws_instance" "graphana-influxdb" {
 	user_data = data.template_file.user_data.rendered
 	key_name = "ec2-user-frankfurt"
 	
+	tags = {
+    		Name = "ec2_instance"
+  	}
+	
 	root_block_device {
 		volume_size = var.ebs_volume_system_size
 		delete_on_termination = var.delete_on_termination
