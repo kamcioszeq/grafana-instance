@@ -11,7 +11,7 @@ variable "instance_type" {
 variable "ami_id" {
 	description = "Ami used to create"
 	type = string
-	default = "ami-0badcc5b522737046"
+	default = "ami-076431be05aaf8080"
 }
 
 variable "delete_on_termination" {
