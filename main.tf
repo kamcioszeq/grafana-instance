@@ -7,7 +7,8 @@ resource "aws_instance" "graphana-influxdb" {
 	instance_type = var.instance_type
 	vpc_security_group_ids = [aws_security_group.instance.id]
 	user_data = data.template_file.user_data.rendered
-
+	key_name = "ec2-user-frankfurt"
+	
 	root_block_device {
 		volume_size = var.ebs_volume_system_size
 		delete_on_termination = var.delete_on_termination
