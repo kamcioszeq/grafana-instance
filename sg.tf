@@ -24,4 +24,19 @@ resource "aws_security_group_rule" "influxdb" {
 	cidr_blocks = ["0.0.0.0/0"]
 	security_group_id = aws_security_group.instance.id
 }
-
+resource "aws_security_group_rule" "ssh_ec2" {
+	type = "ingress"
+	from_port = 22
+	to_port = 22
+	protocol = "tcp"
+	cidr_blocks = ["0.0.0.0/0"]
+	security_group_id = aws_security_group.instance.id
+}
+resource "aws_security_group_rule" "icmp_ec2" {
+	type = "ingress"
+	from_port = -1
+	to_port = -1
+	protocol = "tcp"
+	cidr_blocks = ["0.0.0.0/0"]
+	security_group_id = aws_security_group.instance.id
+}
